@@ -15,3 +15,5 @@ app.use((ctx: any) => {
 const port = Deno.env.get("PORT") || "8080";
 
 await app.listen({ port: +port });
+
+console.log( `Listning on Port ${port} ` );
