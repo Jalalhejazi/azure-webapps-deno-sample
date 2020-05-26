@@ -25,3 +25,13 @@ az ad sp create-for-rbac --name $app --role contributor \
 
 echo "Store the above JSON as the value of a GitHub secret with a name, for example 'AZURE_CREDENTIALS'  "
 ```
+
+
+
+
+## deno run
+
+```bash
+github="https://raw.githubusercontent.com/Jalalhejazi/azure-webapps-deno-sample/master/server.ts"
+deno run --allow-net $github
+```
