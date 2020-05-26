@@ -1,3 +1,7 @@
+
+![Deploy to Azure](https://github.com/Jalalhejazi/azure-webapps-deno-sample/workflows/Deploy%20to%20Azure/badge.svg)
+
+
 ## How to generate AZURE_CREDENTIALS for-GitHub-workflows-actions
 
 - https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md
