@@ -1,14 +1,11 @@
-/*****************************************
-// DevOps: Can Deploy this version to azure
-
-import { Application, Context } from "https://deno.land/x/oak@v4.0.0/mod.ts";
-import messages                 from './messages.ts';
-
-const app = new Application()
-app.use((ctx: any) => {
-  ctx.response.body = messages;
-});
-*******************************************/
+/*****************************************************************************
+   DevOps: Can Deploy this version to azure
+   
+   Deno is NOT ready to Production yet !!!
+   
+   Deno can be used in education and Training in 2020
+   
+*****************************************************************************/
 
 import { Application, Context } from "https://deno.land/x/oak/mod.ts";
 import router                   from './routes.ts';
