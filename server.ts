@@ -20,8 +20,12 @@ import messages                 from './messages.ts';
 Define Routing
 ************************************************/
 const app = new Application();
-app.use(router.routes())
-app.use(router.allowedMethods())
+//app.use(router.routes())
+//app.use(router.allowedMethods())
+
+app.use((ctx: any) => {
+  ctx.response.body = messages;
+});
 
 
 
