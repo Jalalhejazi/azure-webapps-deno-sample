@@ -13,17 +13,18 @@ await app.listen({ port: +port });
 */
 
 import { Application, Context } from "https://deno.land/x/oak@v4.0.0/mod.ts";
+import messages                 from './messages.ts';
 
 const app = new Application();
 
-const hello = 'Hello World,';
-const about = 'Using Deno running inside a docker container.';
-const unicodes = '☁️🦕☁️🦕☁️🦕☁️☁️🦕🦕🦕';
+//const hello = 'Hello World,';
+//const about = 'Using Deno running inside a docker container.';
+//const unicodes = '☁️🦕☁️🦕☁️🦕☁️☁️🦕🦕🦕';
 
-const message = `${hello}\r${about}\r${unicodes}`;
+//const message = `${hello}\r${about}\r${unicodes}`;
 
 app.use((ctx: any) => {
-  ctx.response.body = message;
+  ctx.response.body = messages;
 });
 
 
