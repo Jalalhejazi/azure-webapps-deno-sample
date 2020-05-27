@@ -1,19 +1,12 @@
-import { Application, Context } from "https://deno.land/x/oak@v4.0.0/mod.ts";
+import { Application } from 'https://deno.land/x/oak/mod.ts'
+import router from './routes.ts'
+const port = Number(Deno.env.get("PORT")) || 5000
 
-const app = new Application();
+const app = new Application()
 
-const hello = 'Hello World,';
-const about = 'Using Deno running inside a docker container.';
-const unicodes = '☁️🦕☁️🦕☁️🦕☁️☁️🦕🦕🦕';
+app.use(router.routes())
+app.use(router.allowedMethods())
 
-const message = `${hello}\r${about}\r${unicodes}`;
+console.log(`Server running on port ${port}`)
 
-app.use((ctx: any) => {
-  ctx.response.body = message;
-});
-
-const port = Deno.env.get("PORT") || "8080";
-
-await app.listen({ port: +port });
-
-console.log( `Listning on Port ${port} ` );
+await app.listen({ port })
