@@ -7,7 +7,7 @@
    
 *****************************************************************************/
 
-import { Application, Context } from "https://deno.land/x/oak/mod.ts";
+import { Application } from "https://deno.land/x/oak/mod.ts";
 import router                   from './routes.ts';
 import messages                 from './messages.ts';
 
@@ -17,12 +17,12 @@ import messages                 from './messages.ts';
 Define Routing
 ************************************************/
 const app = new Application();
-//app.use(router.routes())
+app.use(router.routes())
 //app.use(router.allowedMethods())
 
-app.use((ctx: any) => {
-  ctx.response.body = messages;
-});
+// app.use((context:any)  => {
+//   context.response.body = messages;
+// });
 
 
 

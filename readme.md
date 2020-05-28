@@ -27,11 +27,17 @@ echo "Store the above JSON as the value of a GitHub secret with a name, for exam
 ```
 
 
+## deno run on production mode
 
-
-## deno run
+- Transpile from TypeScript (server.ts) to JavaScript (server.bundle.js)
+- Run deno from server.bundle.js
+- If success, then deploy, else debug
 
 ```bash
-github="https://raw.githubusercontent.com/Jalalhejazi/azure-webapps-deno-sample/master/server.ts"
-deno run --allow-net $github
+deno bundle server.ts server.bundle.js
+deno run --allow-net --allow-env server.bundle.js
+# Listning on Port 8080 
 ```
+
+
+
