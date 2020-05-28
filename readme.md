@@ -34,9 +34,10 @@ echo "Store the above JSON as the value of a GitHub secret with a name, for exam
 - If success, then deploy, else debug
 
 ```bash
+
 deno bundle server.ts server.bundle.js
 deno run --allow-net --allow-env server.bundle.js
-# Listning on Port 8080 
+# Deploy to Azure Web Apps and run inside docker container  
 ```
 
 
