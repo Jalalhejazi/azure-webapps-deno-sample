@@ -5,7 +5,7 @@ messages.push("DevOps with github actions.");
 messages.push("Deno running inside a docker container.");
 messages.push("☁️🦕☁️🦕☁️🦕☁️☁️🦕🦕🦕");
 messages.push("☁️☁️☁️☁️☁️ kursus hos SuperUsers 2020 ☁️☁️☁️☁️☁️");
-messages.push("2020-06-16");
+messages.push("2020-06-29");
 
 export default messages;
 
